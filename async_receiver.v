@@ -121,7 +121,7 @@ end
 assign rxd_idle = gap_cnt[p+1];
 
 always @(posedge clk) begin
-    rxd_endofpacket <= over_sampling_tick & ~gap_cnt[p+1] & &gap[p:0];
+ rxd_endofpacket <= over_sampling_tick & ~gap_cnt[p+1] & &gap_cnt[p:0];
 end
 
 `endif
